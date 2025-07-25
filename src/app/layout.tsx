@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hexadecimal Color Codes",
     description: "Find and copy the best hex color codes for your design.",
-    site: "@yourTwitterHandle", // optional
   },
 };
 
@@ -57,7 +56,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Toaster position="top-right" />
-
         {children}
         <Analytics />
       </body>

@@ -8,12 +8,10 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Header />
-      <main className="flex-grow px-4 md:px-8 py-6 bg-gray-50">
-        {children}
-      </main>
+      {children}
       <Footer />
-    </div>
+    </>
   );
 }
