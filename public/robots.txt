@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://getcolorcodes.com
+
+# Sitemaps
+Sitemap: https://getcolorcodes.com/sitemap.xml
