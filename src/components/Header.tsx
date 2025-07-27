@@ -4,9 +4,12 @@ import Link from "next/link";
 
 // Wordmark and nav items
 const title = "ColorCodes";
+const guesserTitle = 'Play Color Guesser'
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Play Color Guesser", href: "/colorGuesser" },
   { label: "About", href: "/about" },
+
 ];
 
 // Nice dynamic colors (can be shuffled or cycled)
@@ -51,7 +54,7 @@ export default function Header() {
   const renderAnimatedWord = (word: string) =>
     word.split("").map((char, index) => (
       <motion.span
-        key={index}
+        key={index + char}
         custom={index}
         variants={letterVariants}
         initial="hidden"
@@ -70,7 +73,7 @@ export default function Header() {
         <h1 className="text-xl font-bold flex">
           {renderAnimatedWord(title)}
         </h1>
-
+       
         <nav className="flex gap-6">
           {navLinks.map(({ label, href }, navIndex) => (
             <Link key={label} href={href} className="text-lg font-bold flex">

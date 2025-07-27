@@ -1,42 +1,30 @@
-import React from "react";
+// components/DynamicColoredTitle.tsx
+'use client';
 
-const safeColors = [
-  "#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4",
-  "#46f0f0", "#f032e6", "#bcf60c", "#fabebe", "#008080", "#e6beff",
-  "#9a6324", "#fffac8", "#800000", "#aaffc3", "#808000", "#ffd8b1",
-  "#000075", "#808080", "#000000"
-].filter((hex) => {
-  const [r, g, b] = hexToRgb(hex);
-  // Skip too light colors
-  return r + g + b < 700;
-});
+import { useEffect, useState } from 'react';
 
-function hexToRgb(hex: string) {
-  const bigint = parseInt(hex.replace("#", ""), 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  return [r, g, b];
-}
+const colors = [
+  '#FF5733', '#1DA1F2', '#FFD700', '#4B0082', '#00CED1',
+  '#FF69B4', '#008080', '#00FF7F', '#FF4500', '#6A5ACD'
+];
 
-interface Props {
-  text: string;
-  className?: string;
-}
+export default function DynamicColoredTitle({ text }: { text: string }) {
+  const [color, setColor] = useState(colors[0]);
 
-const DynamicColoredTitle: React.FC<Props> = ({ text, className = "" }) => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const random = Math.floor(Math.random() * colors.length);
+      setColor(colors[random]);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <h1 className={`text-4xl font-bold mb-4 ${className}`}>
-      {text.split("").map((char, index) => {
-        const color = safeColors[index % safeColors.length];
-        return (
-          <span key={index} style={{ color }}>
-            {char}
-          </span>
-        );
-      })}
+    <h1
+      className="text-4xl md:text-5xl font-bold mb-4 transition-colors duration-500"
+      style={{ color }}
+    >
+      {text}
     </h1>
   );
-};
-
-export default DynamicColoredTitle;
+}

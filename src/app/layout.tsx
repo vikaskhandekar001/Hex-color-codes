@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hexadecimal Color Codes",
     description: "Find and copy the best hex color codes for your design.",
+    images: ["https://getcolorcodes.com/color_code_logo.png"],
   },
   other: {
     'google-site-verification': 'tHXnhNBddvE7AOVtTFw-uMTaf7NLOJiyruFEXRBwZ44'
