@@ -22,12 +22,14 @@ export default function ContactPage() {
             <Card className="shadow-md border border-gray-200">
                 <CardContent className="p-6 space-y-5">
                     <form
-                        action="https://formsubmit.co/vikaskhandekar001%40gmail.com"
+                        action="https://formsubmit.io/send/3553138e8df5497d58301a94d516f57b"
                         method="POST"
                         className="space-y-5"
                     >
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next" value="https://getcolorcodes.com/thank-you" />
+                        <input type="text" name="3553138e8df5497d58301a94d516f57b" style={{ display: "none" }} />
+
+                        <input type="hidden" name="_redirect" value="https://www.getcolorcodes.com/thank-you" />
 
                         <Input
                             type="text"
