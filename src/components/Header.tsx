@@ -7,8 +7,9 @@ const title = "ColorCodes";
 const guesserTitle = 'Play Color Guesser'
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Play Color Guesser", href: "/colorGuesser" },
+  { label: "Play Color Guesser", href: "/playColorGames" },
   { label: "About", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 
 ];
 
@@ -73,7 +74,7 @@ export default function Header() {
         <h1 className="text-xl font-bold flex">
           {renderAnimatedWord(title)}
         </h1>
-       
+
         <nav className="flex gap-6">
           {navLinks.map(({ label, href }, navIndex) => (
             <Link key={label} href={href} className="text-lg font-bold flex">
