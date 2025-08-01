@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Hexadecimal Color Codes & Guessing Game | HTML Color Explorer",
+  title: "Hexadecimal Color Codes & Guessing Game | HTML Color Explorer | Color Guessing game for kids",
   description:
     "Explore, pick, and copy HTML hex color codes instantly. Play the color guessing game to test your knowledge of hex codes and color names!",
   keywords: [
+    "kids color game",
     "hex color code",
     "HTML color codes",
     "color guessing game",
     "color picker",
-    "kids color game",
     "CSS color codes",
     "flat UI colors",
     "material colors",
@@ -19,12 +19,15 @@ export const metadata: Metadata = {
     "hex color game",
     "learn colors",
   ],
+  alternates: {
+    canonical: 'https://www.getcolorcodes.com/',
+  },
   openGraph: {
     title: "Hexadecimal Color Codes & Game | HTML Color Explorer",
     description:
       "Find and copy your favorite hex color codes. Play a fun color guessing game and learn while exploring palettes like Flat UI and Material.",
     url: "https://getcolorcodes.com",
-    siteName: "Hex Color Explorer | Color Guessing game",
+    siteName: "Hex Color Explorer | Color Guessing game for kids",
     type: "website",
     locale: "en_US",
     images: [
@@ -35,13 +38,7 @@ export const metadata: Metadata = {
         alt: "GetColorCodes - HTML Color Explorer | Color Guessing game ",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hexadecimal Color Codes & Fun Game",
-    description:
-      "Discover beautiful hex color codes and test yourself with a fun and educational color guessing game.",
-  },
+  }
 };
 
 export default function HomePage() {
