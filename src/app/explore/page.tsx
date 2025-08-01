@@ -17,12 +17,9 @@ export const metadata = {
     siteName: "GetColorCodes",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Explore All HTML Color Names and Codes | GetColorCodes",
-    description:
-      "Discover and copy 140+ HTML color names with HEX, RGB, and HSL values in one click.",
-  },
+  alternates: {
+    canonical: 'https://www.getcolorcodes.com/explore',
+  }
 };
 
 export default function ExplorePage() {
